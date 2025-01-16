@@ -1,0 +1,22 @@
+{
+  "name": "web_project_around_express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "author": "Diego Rodrigo Cano",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.2",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "express": "^4.21.1"
+  }
+}
