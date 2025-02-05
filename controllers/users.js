@@ -2,7 +2,7 @@ const User = require("../models/user");
 
 const getUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await User.find({});
     res.status(200).send(users);
   } catch (error) {
     res.status(500).send({ message: "Error al obtener usuarios", error });
@@ -24,7 +24,7 @@ const getUserById = async (req, res) => {
 const createUser = async (req, res) => {
   const { name, about, avatar } = req.body;
   try {
-    const newUser = await User.User.create({ name, about, avatar });
+    const newUser = await User.create({ name, about, avatar });
     res.status(201).send(newUser);
   } catch (error) {
     console.log(error);
