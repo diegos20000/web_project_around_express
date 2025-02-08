@@ -12,7 +12,7 @@ const getAllCards = async (req, res) => {
 const createCard = async (req, res) => {
   console.log(req.user._id);
   const { name, link } = req.body;
-  const owner = req.user ? req.user.id : null;
+  const owner = req.user ? req.user._id : null;
 
   if (!name || !link || !owner) {
     return res.status(400).send({ message: "Faltan campos requeridos" });
